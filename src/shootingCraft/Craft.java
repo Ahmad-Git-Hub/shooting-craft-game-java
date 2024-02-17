@@ -11,7 +11,7 @@ public class Craft {
 
 
     public Craft() {
-        ImageIcon imageIcon = new ImageIcon("static\\craft.png");
+        ImageIcon imageIcon = new ImageIcon("static\\myCraft.png");
         image = imageIcon.getImage();
         x = 160;
         y = 160;

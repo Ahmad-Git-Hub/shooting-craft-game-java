@@ -2,9 +2,9 @@ package shootingCraft;
 
 import javax.swing.*;
 
-public class MainFrame extends JFrame {
+public class MainFrameAhmadMohamad extends JFrame {
 
-    public MainFrame() {
+    public MainFrameAhmadMohamad() {
         add(new Board());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 400);
@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        MainFrame mainFrame = new MainFrame();
+        MainFrameAhmadMohamad mainFrameAhmadMohamad = new MainFrameAhmadMohamad();
     }
 
 }
