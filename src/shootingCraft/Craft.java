@@ -96,7 +96,7 @@ public class Craft {
         }
 
         if (key == KeyEvent.VK_RIGHT) {
-            if (x <= 600 - image.getWidth(null))
+            if (x <= 400)
                 dx = 5;
             else
                 dx = 0;
@@ -110,7 +110,7 @@ public class Craft {
         }
 
         if (key == KeyEvent.VK_DOWN) {
-            if (y <= 400 - image.getHeight(null))
+            if (y <= 300)
                 dy = 5;
             else
                 dy = 0;
