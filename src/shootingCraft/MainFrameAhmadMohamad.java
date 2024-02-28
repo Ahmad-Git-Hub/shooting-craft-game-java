@@ -20,6 +20,6 @@ public class MainFrameAhmadMohamad extends JFrame{
     public static void main(String[] args) {
         MainFrameAhmadMohamad mainFrame = new MainFrameAhmadMohamad();
 
-    }
+     }
 
 }

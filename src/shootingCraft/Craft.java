@@ -2,19 +2,21 @@ package shootingCraft;
 
 
 import java.awt.*;
-import javax.swing.ImageIcon;
+import javax.swing.*;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class Craft {
+    int alterMissile = 1;
     private int x;
     private int y;
     private int dx;
     private int dy;
     private final Image image;
 
-    int width;
-    int height;
+    private int width;
+    private int height;
     boolean visible;
 
     private ArrayList<Missile> missiles;
@@ -23,7 +25,7 @@ public class Craft {
 
 
     public Craft() {
-        ImageIcon imageIcon = new ImageIcon("static\\myCraft.png");
+        ImageIcon imageIcon = new ImageIcon("static\\craftImage.png");
         image = imageIcon.getImage();
         x = 160;
         y = 160;
@@ -33,7 +35,35 @@ public class Craft {
         visible = true;
         missiles = new ArrayList<Missile>();
     }
+    public ArrayList<Missile> getMissiles() {
+        return missiles;
+    }
+    public void setVisible(boolean bol)
+    {
+        this.visible = bol;
+    }
+    public boolean isVisible(){
+        return this.visible;
+    }
+    public Rectangle getBound(){
+        return new Rectangle(x,y,width,height);
+    }
 
+    public void fire() {
+        Missile missile;
+        if(alterMissile> 0) {
+           missile  = new Missile(x + width, y + (height / 2));
+        } else {
+            missile = new Missile(x + width, y +  (height/4));
+
+        }
+        alterMissile *= -1;
+        missiles.add(missile);
+    }
+
+    public void setMissiles(ArrayList<Missile> missiles) {
+        this.missiles = missiles;
+    }
 
     public Image getImage() {
         return image;
@@ -55,7 +85,7 @@ public class Craft {
         int key = e.getKeyCode();
 
         if(key == KeyEvent.VK_SPACE) {
-            fire
+            fire();
         }
 
         if (key == KeyEvent.VK_LEFT) {
@@ -108,25 +138,5 @@ public class Craft {
         }
     }
 
-    public Rectangle getBound(){
-        return new Rectangle(x,y,width,height);
-    }
-    public ArrayList<Missile> getMissiles() {
-        return missiles;
-    }
-    public boolean isVisible(){
-        return this.visible;
-    }
-    public void setVisible(boolean bol)
-    {
-        this.visible = bol;
-    }
-    public void addMissile() {
-        Missile missile = new Missile();
-        missile.addMissile(x+width, y+height/2);
-    }
 
-    public void setMissiles(ArrayList<Missile> missiles) {
-        this.missiles = missiles;
-    }
 }
