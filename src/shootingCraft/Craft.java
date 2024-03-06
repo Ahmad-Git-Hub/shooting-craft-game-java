@@ -25,7 +25,7 @@ public class Craft {
 
 
     public Craft() {
-        ImageIcon imageIcon = new ImageIcon("static\\craftImage.png");
+        ImageIcon imageIcon = new ImageIcon("static\\craftImageV2.png");
         image = imageIcon.getImage();
         x = 160;
         y = 160;
@@ -51,7 +51,7 @@ public class Craft {
 
     public void fire() {
         Missile missile;
-        if(alterMissile> 0) {
+        if(alterMissile > 0) {
            missile  = new Missile(x + width, y + (height / 2));
         } else {
             missile = new Missile(x + width, y +  (height/4));

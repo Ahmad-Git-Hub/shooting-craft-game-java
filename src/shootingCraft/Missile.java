@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
 
 
         public Missile(int x, int y) {
-            ImageIcon imageIcon = new ImageIcon("static\\missile.png");
+            ImageIcon imageIcon = new ImageIcon("static\\missileResized.png");
             image = imageIcon.getImage();
             this.x = x;
             this.y = y;
