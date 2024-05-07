@@ -81,7 +81,8 @@ private final int[][] positions = {
             FontMetrics metre = this.getFontMetrics(small);
             graphics.setColor(Color.black);
             graphics.setFont(small);
-            graphics.drawString(msg, (B_WIDTH - metre.stringWidth(msg)) / 2, B_HEIGHT / 2);
+//            graphics.drawString(msg, (B_WIDTH - metre.stringWidth(msg)) / 2, B_HEIGHT / 2);
+            graphics.drawString(msg, 250, 170);
         }
         graphics.dispose();
     }
